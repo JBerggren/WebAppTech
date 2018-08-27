@@ -1,5 +1,3 @@
-//From https://developers.google.com/web/fundamentals/primers/service-workers/
-
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/'
@@ -11,7 +9,8 @@ self.addEventListener('install', function (event) {
         caches.open(CACHE_NAME)
             .then(function (cache) {
                 console.log('Opened cache');
-                return cache.addAll(urlsToCache);
+                return;
+                //return cache.addAll(urlsToCache);
             })
     );
 });
